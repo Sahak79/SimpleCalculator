@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/calculator.css" />
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/calculator.js"></script>
+</head>
+<body>
+
+<div class="modal-container" >
+    <div class="modal">
+        <span class="close-btn">X</span>
+        <section class="container">
+            <h3 class="text-center"></h3>
+            <div class="calculator">
+                <input type="text" onkeypress="CalculatorModule.inputHandler(event)" />
+                <div class="row">
+                    <div class="key" data-key="1" >1</div>
+                    <div class="key" data-key="2">2</div>
+                    <div class="key" data-key="3">3</div>
+                    <div class="key last action">*</div>
+                </div>
+                <div class="row">
+                    <div class="key" data-key="4">4</div>
+                    <div class="key" data-key="5">5</div>
+                    <div class="key" data-key="6">6</div>
+                    <div class="key last action">+</div>
+                </div>
+                <div class="row">
+                    <div class="key" data-key="7">7</div>
+                    <div class="key" data-key="8">8</div>
+                    <div class="key" data-key="9">9</div>
+                    <div class="key last action">-</div>
+                </div>
+                <div class="row">
+                    <div class="key">.</div>
+                    <div class="key" data-key="0">0</div>
+                    <div class="key action instant">cl</div>
+                    <div class="key last action">/</div>
+                </div>
+                <div class="row equals">
+                    <div class="key last action instant">=</div>
+                </div>
+            </div>
+            <p id="message"></p>
+        </section>
+    </div>
+</div>
+
+<div class="btn-container">
+    <button class="btn" onclick="CalculatorModule.open()" >simple calculator</button>
+</div>
+
+</body>
+</html>
